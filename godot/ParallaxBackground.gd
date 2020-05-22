@@ -7,5 +7,5 @@ func _ready():
   set_process(true)
   
 func _process(delta):
-  raul -= 100 * delta
+  raul -= 20 * delta
   set_scroll_offset(Vector2(raul, 0))
