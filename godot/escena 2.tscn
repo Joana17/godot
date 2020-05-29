@@ -1,3 +1,81 @@
-[gd_scene format=2]
+[gd_scene load_steps=4 format=2]
 
-[node name="escena 2" type="Node"]
+[ext_resource path="res://Control.gd" type="Script" id=1]
+[ext_resource path="res://Captura de pantalla 2020-05-12 a les 20.51.06.png" type="Texture" id=2]
+[ext_resource path="res://Captura de pantalla 2020-05-28 a les 13.21.10.png" type="Texture" id=3]
+
+[node name="entrada del edifici - escena 2" type="Node"]
+
+[node name="fons" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="."]
+margin_left = 3.53548
+margin_top = 0.707062
+margin_right = 1031.54
+margin_bottom = 594.707
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="pujar" type="VBoxContainer" parent="Control"]
+margin_left = 73.5705
+margin_top = 388.268
+margin_right = 645.57
+margin_bottom = 640.268
+rect_scale = Vector2( 0.669647, 0.306682 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="pujar Button" type="TextureButton" parent="Control/pujar"]
+margin_right = 572.0
+margin_bottom = 252.0
+texture_normal = ExtResource( 2 )
+
+[node name="Pujar" type="Label" parent="Control/pujar/pujar Button"]
+margin_left = -349.778
+margin_top = 69.4532
+margin_right = 20.222
+margin_bottom = 134.453
+rect_scale = Vector2( 3.37934, 7.51593 )
+text = "PUJAR"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="marxar" type="VBoxContainer" parent="Control"]
+margin_left = 566.345
+margin_top = 386.744
+margin_right = 1212.34
+margin_bottom = 626.745
+rect_scale = Vector2( 0.591141, 0.319947 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="marxar Button" type="TextureButton" parent="Control/marxar"]
+margin_right = 646.0
+margin_bottom = 240.0
+texture_normal = ExtResource( 3 )
+
+[node name="marxar text" type="Label" parent="Control/marxar/marxar Button"]
+margin_left = 205.289
+margin_top = 73.5603
+margin_right = 575.289
+margin_bottom = 138.56
+rect_scale = Vector2( 3.90962, 7.25104 )
+text = "MARXAR"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureProgress" type="TextureProgress" parent="Control"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Control/pujar/pujar Button" to="Control" method="_on_pujar_Button_pressed"]
+[connection signal="pressed" from="Control/marxar/marxar Button" to="Control" method="_on_marxar_Button_pressed"]

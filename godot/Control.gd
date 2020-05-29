@@ -15,11 +15,18 @@ func _ready():
 #func _process(delta):
 #	pass
 
-
+"vols entrar a la Massana"
 func _on_JUGAR_pressed():
-# warning-ignore:return_value_discarded
 	get_tree ().change_scene("res://escena 2.tscn")
-
 
 func _on_sortir_pressed():
 	get_tree().quit()
+
+
+
+"escena 2"
+func _on_pujar_Button_pressed():
+	get_tree().change_scene("res://escena 3.tscn")
+
+func _on_marxar_Button_pressed():
+	get_tree ().change_scene("res://Node2D.tscn")
