@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Control.gd" type="Script" id=1]
+[ext_resource path="res://il·lustracions/Captura de pantalla 2020-05-30 a les 20.17.42.png" type="Texture" id=2]
+[ext_resource path="res://il·lustracions/21.jpg" type="Texture" id=3]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="11" type="Sprite" parent="."]
+position = Vector2( 494.78, 288.557 )
+scale = Vector2( 0.502261, 0.466458 )
+texture = ExtResource( 3 )
+
+[node name="Control" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+rect_scale = Vector2( 25.6475, 14.9967 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="fletxa fuck" type="VBoxContainer" parent="Control"]
+margin_left = 29.8804
+margin_top = 35.5488
+margin_right = 473.881
+margin_bottom = 253.549
+rect_scale = Vector2( 0.00902835, 0.0154119 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="fuck4Button" type="TextureButton" parent="Control/fletxa fuck"]
+margin_right = 444.0
+margin_bottom = 218.0
+texture_normal = ExtResource( 2 )
+[connection signal="pressed" from="Control/fletxa fuck/fuck4Button" to="Control" method="_on_fuck4Button_pressed"]

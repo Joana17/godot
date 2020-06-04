@@ -1,81 +1,46 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Control.gd" type="Script" id=1]
-[ext_resource path="res://Captura de pantalla 2020-05-12 a les 20.51.06.png" type="Texture" id=2]
-[ext_resource path="res://Captura de pantalla 2020-05-28 a les 13.21.10.png" type="Texture" id=3]
+[ext_resource path="res://Captura de pantalla 2020-05-30 a les 20.17.42.png" type="Texture" id=2]
+[ext_resource path="res://il·lustracions/2.JPG" type="Texture" id=3]
 
-[node name="entrada del edifici - escena 2" type="Node"]
+[node name=" escena 2 - anant a la massana" type="Node"]
 
-[node name="fons" type="CanvasLayer" parent="."]
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="2" type="Sprite" parent="Node2D"]
+position = Vector2( 518.16, 301.007 )
+scale = Vector2( 0.320019, 0.320019 )
+
+[node name="2" type="Sprite" parent="Node2D/2"]
+position = Vector2( -2.38562, -0.277832 )
+scale = Vector2( 1.19303, 1.19303 )
+texture = ExtResource( 3 )
 
 [node name="Control" type="Control" parent="."]
-margin_left = 3.53548
-margin_top = 0.707062
-margin_right = 1031.54
-margin_bottom = 594.707
+anchor_left = -0.00121129
+anchor_right = -0.00121129
+margin_left = 4.03548
+margin_top = 7.20706
+margin_right = 1032.04
+margin_bottom = 601.207
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="pujar" type="VBoxContainer" parent="Control"]
-margin_left = 73.5705
-margin_top = 388.268
-margin_right = 645.57
-margin_bottom = 640.268
-rect_scale = Vector2( 0.669647, 0.306682 )
+[node name="continuar2" type="VBoxContainer" parent="Control"]
+margin_left = 787.859
+margin_top = 491.954
+margin_right = 1359.86
+margin_bottom = 743.954
+rect_scale = Vector2( 0.239129, 0.310437 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="pujar Button" type="TextureButton" parent="Control/pujar"]
+[node name="continuar2 Button" type="TextureButton" parent="Control/continuar2"]
 margin_right = 572.0
-margin_bottom = 252.0
+margin_bottom = 218.0
 texture_normal = ExtResource( 2 )
-
-[node name="Pujar" type="Label" parent="Control/pujar/pujar Button"]
-margin_left = -349.778
-margin_top = 69.4532
-margin_right = 20.222
-margin_bottom = 134.453
-rect_scale = Vector2( 3.37934, 7.51593 )
-text = "PUJAR"
-align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="marxar" type="VBoxContainer" parent="Control"]
-margin_left = 566.345
-margin_top = 386.744
-margin_right = 1212.34
-margin_bottom = 626.745
-rect_scale = Vector2( 0.591141, 0.319947 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="marxar Button" type="TextureButton" parent="Control/marxar"]
-margin_right = 646.0
-margin_bottom = 240.0
-texture_normal = ExtResource( 3 )
-
-[node name="marxar text" type="Label" parent="Control/marxar/marxar Button"]
-margin_left = 205.289
-margin_top = 73.5603
-margin_right = 575.289
-margin_bottom = 138.56
-rect_scale = Vector2( 3.90962, 7.25104 )
-text = "MARXAR"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="TextureProgress" type="TextureProgress" parent="Control"]
-margin_right = 40.0
-margin_bottom = 40.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-[connection signal="pressed" from="Control/pujar/pujar Button" to="Control" method="_on_pujar_Button_pressed"]
-[connection signal="pressed" from="Control/marxar/marxar Button" to="Control" method="_on_marxar_Button_pressed"]
+[connection signal="pressed" from="Control/continuar2/continuar2 Button" to="Control" method="_on_continuar2_Button_pressed"]

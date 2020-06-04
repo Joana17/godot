@@ -1,0 +1,56 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://il·lustracions/5.JPG" type="Texture" id=1]
+[ext_resource path="res://il·lustracions/5.2pujar.png" type="Texture" id=2]
+[ext_resource path="res://Control.gd" type="Script" id=3]
+[ext_resource path="res://il·lustracions/5.1anar.png" type="Texture" id=4]
+
+[node name="un cop dins" type="Node"]
+
+[node name="5" type="Sprite" parent="."]
+position = Vector2( 496.624, 305.74 )
+scale = Vector2( 0.472838, 0.472838 )
+texture = ExtResource( 1 )
+
+[node name="Control" type="Control" parent="."]
+margin_left = 3.14615
+margin_top = 1.57307
+margin_right = 43.1461
+margin_bottom = 41.5731
+rect_scale = Vector2( 25.506, 14.9759 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="anar a classe" type="VBoxContainer" parent="Control"]
+margin_left = 5.0
+margin_top = 10.0
+margin_right = 2737.0
+margin_bottom = 2058.0
+rect_scale = Vector2( 0.0103733, 0.0170476 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="anar a classeButton" type="TextureButton" parent="Control/anar a classe"]
+margin_right = 2732.0
+margin_bottom = 536.0
+texture_normal = ExtResource( 4 )
+
+[node name="seguir pujant" type="VBoxContainer" parent="Control"]
+margin_left = 23.996
+margin_top = 21.7683
+margin_right = 717.996
+margin_bottom = 469.768
+rect_scale = Vector2( 0.0138061, 0.0223274 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="seguirpujantButton" type="TextureButton" parent="Control/seguir pujant"]
+margin_right = 694.0
+margin_bottom = 448.0
+texture_normal = ExtResource( 2 )
+[connection signal="pressed" from="Control/anar a classe/anar a classeButton" to="Control" method="_on_anar_a_classeButton_pressed"]
+[connection signal="pressed" from="Control/seguir pujant/seguirpujantButton" to="Control" method="_on_seguirpujantButton_pressed"]

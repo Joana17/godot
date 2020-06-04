@@ -1,0 +1,56 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Control.gd" type="Script" id=1]
+[ext_resource path="res://il·lustracions/resposta_si.JPG" type="Texture" id=2]
+[ext_resource path="res://il·lustracions/8.JPG" type="Texture" id=3]
+[ext_resource path="res://il·lustracions/resposta_no.JPG" type="Texture" id=4]
+
+[node name="sona alarma incendis" type="Node"]
+
+[node name="6" type="Sprite" parent="."]
+position = Vector2( 519.83, 263.487 )
+scale = Vector2( 0.40152, 0.40152 )
+texture = ExtResource( 3 )
+
+[node name="Control" type="Control" parent="."]
+margin_left = 0.805943
+margin_top = -1.61192
+margin_right = 40.8059
+margin_bottom = 38.3881
+rect_scale = Vector2( 25.5582, 14.9823 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="si deixar" type="VBoxContainer" parent="Control"]
+margin_left = 10.7578
+margin_top = 32.1152
+margin_right = 2742.76
+margin_bottom = 2080.12
+rect_scale = Vector2( 0.00165848, 0.00203145 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="siveure Button" type="TextureButton" parent="Control/si deixar"]
+margin_right = 2732.0
+margin_bottom = 2048.0
+texture_normal = ExtResource( 2 )
+
+[node name="no deixar" type="VBoxContainer" parent="Control"]
+margin_left = 16.7676
+margin_top = 32.1309
+margin_right = 2748.77
+margin_bottom = 2080.13
+rect_scale = Vector2( 0.00123827, 0.00176399 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="noveureButton" type="TextureButton" parent="Control/no deixar"]
+margin_right = 2732.0
+margin_bottom = 2048.0
+texture_normal = ExtResource( 4 )
+[connection signal="pressed" from="Control/si deixar/siveure Button" to="Control" method="_on_siveure_Button_pressed"]
+[connection signal="pressed" from="Control/no deixar/noveureButton" to="Control" method="_on_noveureButton_pressed"]

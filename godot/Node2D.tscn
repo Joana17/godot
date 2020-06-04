@@ -1,104 +1,48 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://cel.jpg" type="Texture" id=1]
-[ext_resource path="res://massana copy.png" type="Texture" id=2]
-[ext_resource path="res://ParallaxBackground.gd" type="Script" id=3]
-[ext_resource path="res://Captura de pantalla 2020-05-12 a les 20.51.06.png" type="Texture" id=4]
+[ext_resource path="res://il·lustracions/1.JPG" type="Texture" id=1]
+[ext_resource path="res://il·lustracions/Captura de pantalla 2020-05-30 a les 20.17.42.png" type="Texture" id=2]
 [ext_resource path="res://Control.gd" type="Script" id=5]
-[ext_resource path="res://Captura de pantalla 2020-05-28 a les 13.21.10.png" type="Texture" id=6]
 
 [node name="MENÚ" type="Node2D"]
 scale = Vector2( 1.00184, 1 )
 
-[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-script = ExtResource( 3 )
+[node name="Node" type="Node" parent="."]
 
-[node name="cel" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_mirroring = Vector2( 1022, 0 )
+[node name="Node2D" type="Node2D" parent="Node"]
 
-[node name="cel-img" type="TextureRect" parent="ParallaxBackground/cel"]
-margin_right = 40.0
-margin_bottom = 40.0
-rect_scale = Vector2( 2.71978, 2.21935 )
+[node name="2" type="Sprite" parent="Node/Node2D"]
+position = Vector2( 504.991, 314.296 )
+scale = Vector2( 0.387752, 0.370764 )
 texture = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": true
-}
 
-[node name="massana" type="ParallaxLayer" parent="."]
+[node name="intro - últim dia de classe" type="Node" parent="."]
 
-[node name="massana-img" type="TextureRect" parent="massana"]
-margin_right = 40.0
-margin_bottom = 40.0
-rect_scale = Vector2( 1.00454, 0.791742 )
-texture = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": true
-}
-
-[node name="vols entrar a Massana\?" type="Node" parent="."]
-
-[node name="Control" type="Control" parent="vols entrar a Massana\?"]
+[node name="Control" type="Control" parent="intro - últim dia de classe"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -2.0
-margin_right = -2.0
+margin_left = -1.09618
+margin_top = -2.78262
+margin_right = -1.09625
+margin_bottom = -2.78259
 rect_scale = Vector2( 1.02709, 1.04373 )
 script = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="jugar" type="VBoxContainer" parent="vols entrar a Massana\?/Control"]
-margin_left = 295.847
-margin_top = 222.628
-margin_right = 867.847
-margin_bottom = 474.628
-rect_scale = Vector2( 0.72841, 0.250249 )
+[node name="continuar" type="VBoxContainer" parent="intro - últim dia de classe/Control"]
+margin_left = 769.462
+margin_top = 481.988
+margin_right = 1341.46
+margin_bottom = 733.988
+rect_scale = Vector2( 0.235087, 0.292525 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name=" botó" type="TextureButton" parent="vols entrar a Massana\?/Control/jugar"]
-margin_right = 572.0
-margin_bottom = 252.0
-texture_normal = ExtResource( 4 )
-
-[node name="text" type="Label" parent="vols entrar a Massana\?/Control/jugar/ botó"]
-margin_left = 155.214
-margin_top = 34.4585
-margin_right = 204.214
-margin_bottom = 48.4585
-rect_scale = Vector2( 4.55405, 12.5514 )
-text = "ENTRAR"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="sortir" type="VBoxContainer" parent="vols entrar a Massana\?/Control"]
-margin_left = 262.681
-margin_top = 337.604
-margin_right = 908.681
-margin_bottom = 589.604
-rect_scale = Vector2( 0.72841, 0.250249 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="botó" type="TextureButton" parent="vols entrar a Massana\?/Control/sortir"]
-margin_right = 646.0
-margin_bottom = 240.0
-texture_normal = ExtResource( 6 )
-
-[node name="text" type="Label" parent="vols entrar a Massana\?/Control/sortir/botó"]
-margin_left = 63.7335
-margin_top = 26.8014
-margin_right = 176.734
-margin_bottom = 40.8014
-rect_scale = Vector2( 4.55405, 12.5514 )
-text = "QUEDAR-SE FORA"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-[connection signal="pressed" from="vols entrar a Massana?/Control/jugar/ botó" to="vols entrar a Massana?/Control" method="_on_JUGAR_pressed"]
-[connection signal="pressed" from="vols entrar a Massana?/Control/sortir/botó" to="vols entrar a Massana?/Control" method="_on_sortir_pressed"]
+[node name="continuarButton" type="TextureButton" parent="intro - últim dia de classe/Control/continuar"]
+margin_right = 571.0
+margin_bottom = 218.0
+texture_normal = ExtResource( 2 )
+[connection signal="pressed" from="intro - últim dia de classe/Control/continuar/continuarButton" to="intro - últim dia de classe/Control" method="_on_continuarButton_pressed"]
