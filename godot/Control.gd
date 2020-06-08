@@ -38,15 +38,15 @@ func _on_seguirpujantButton_pressed():
 func _on_seguirButton_pressed():
 	get_tree().change_scene("res://escena 4.1.4.tscn")
 
-"escena 4.1.4 - ascensor alarma"
+"escena 4.1.4 - ascensor alarma" "so alarma"
 func _on_seguir2_pressed():
 	get_tree().change_scene("res://escena 4.1.5.tscn")
 
-"escena 4.1.5 - ascensor ajuda"
+"escena 4.1.5 - ascensor ajuda" "so alarma"
 func _on_si_pressed():
 	get_tree().change_scene("res://escena 4.1.6.tscn")
 
-"escena 4.1.6 - afirmació"
+"escena 4.1.6 - afirmació" "so alarma-help me"
 func _on_fletxafinal_pressed():
 	get_tree().change_scene("res://escena 4.1.7.tscn")
 
@@ -123,19 +123,3 @@ func _on_fuck3Button_pressed():
 "escena 7.3.3 - hels sense proj amb foc"
 func _on_fuck4Button_pressed():
 	get_tree().change_scene("res://escena 7.2.4.tscn")
-
-
-
-
-	pass # Replace with function body.
-
-
-
-	pass # Replace with function body.
-
-
-	pass # Replace with function body.
-
-
-
-	pass # Replace with function body.

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/solo-clap.ogg-672f4189b3d6df7b7a7d83ef11d940e2.oggstr"
+
+[deps]
+
+source_file="res://solo-clap.ogg"
+dest_files=[ "res://.import/solo-clap.ogg-672f4189b3d6df7b7a7d83ef11d940e2.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
